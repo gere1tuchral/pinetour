@@ -170,10 +170,11 @@
   justify-content: flex-end;
   gap: 20px;
 }
-#roadmap2 > div {
+#roadmap2 > .cardList {
   width: 100%;
   height: 112px;
   border-radius: 120px;
+  border: 4px solid transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,6 +194,38 @@
 #r5 {
   background-color: #97cce0cc;
 }
+#r1:hover {
+  border: 4px solid #ffffff;
+}
+#r2:hover {
+  border: 4px solid #ffffff;
+}
+#r3:hover {
+  border: 4px solid #ffffff;
+}
+#r4:hover {
+  border: 4px solid #ffffff;
+}
+#r5:hover {
+  border: 4px solid #ffffff;
+}
+
+#r1:hover ~ .roadpin1 {
+  display: block;
+}
+#r2:hover ~ .roadpin2 {
+  display: block;
+}
+#r3:hover ~ .roadpin3 {
+  display: block;
+}
+#r4:hover ~ .roadpin4 {
+  display: block;
+}
+#r5:hover ~ .roadpin5 {
+  display: block;
+}
+
 .day {
   border-radius: 50%;
   background-color: white;
@@ -229,6 +262,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 #footer1 {
   width: 100%;
@@ -255,27 +289,20 @@
   margin-top: 80px;
 }
 #mainf > div {
+  position: relative;
   height: 100%;
   width: 384px;
   border-radius: 40px;
   background-color: #fafbfc;
 }
-.mappin1 {
-  position: absolute;
-  top: 230px;
-  left: 749px;
-  background-image: url(./mappin.png);
-  height: 34px;
-  width: 34px;
-  background-size: cover;
-  background-position: center;
-}
+
 #k1 {
   width: 1200px;
   height: 640px;
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  position: relative;
 }
 #k2 {
   width: 513px;
@@ -286,8 +313,19 @@
   height: 640px;
   position: relative;
 }
-#k3 > div {
+#k4 > div {
   position: absolute;
+  background-image: url(./mappin.png);
+  height: 34px;
+  width: 34px;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+.mappin1 {
+  position: absolute;
+  top: 230px;
+  left: 749px;
   background-image: url(./mappin.png);
   height: 34px;
   width: 34px;
@@ -311,18 +349,70 @@
   top: 181px;
   left: 492px;
 }
-.img1 {
-  background-image: url(./sukh.png);
+.roadpin1 {
+  display: none;
   background-size: cover;
   background-position: center;
   width: 245px;
   height: 245px;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
   z-index: 1;
+  top: 65px;
+  right: 22px;
+  background-image: url(./sukh.png);
+}
+.roadpin2 {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: -46px;
+  left: 719px;
+  background-image: url(./amarbasylan.png);
+}
+.roadpin3 {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 82px;
+  left: 583px;
+  background-image: url(./khorgo.png);
+}
+.roadpin4 {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: -80px;
+  left: 699px;
+  background-image: url(./terh.png);
+}
+.roadpin5 {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: -84px;
+  left: 532px;
+  background-image: url(./huvsgul.png);
 }
 .fo1 {
   display: flex;
@@ -358,7 +448,10 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.fo22 {
+.fo3 {
+  position: absolute;
+  bottom: 48px;
+  left: 24px;
   height: 48px;
   width: 336px;
   display: flex;
@@ -421,4 +514,68 @@
   color: #fafbfc;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+}
+#div1:hover .fo3 {
+  background-color: black;
+  color: white;
+}
+#div2:hover .fo3 {
+  background-color: black;
+  color: white;
+}
+#div3:hover .fo3 {
+  background-color: black;
+  color: white;
+}
+
+#div1:hover {
+  box-shadow: -8px -8px rgba(42, 117, 143, 0.25),
+    8px 8px rgb(31, 114, 170, 0.46);
+}
+#div2:hover {
+  box-shadow: -8px -8px rgba(42, 117, 143, 0.25),
+    8px 8px rgb(31, 114, 170, 0.46);
+}
+#div3:hover {
+  box-shadow: -8px -8px rgba(42, 117, 143, 0.25),
+    8px 8px rgb(31, 114, 170, 0.46);
+}
+#z2 > div {
+  background-color: white;
+  border-radius: 9999px;
+  width: 167px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  gap: 10px;
+  color: #6972b5;
+}
+#fb {
+  background-image: url(./77a3a1efd02abbb74c586b6b15aee2f2279ac1ac.png);
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: cover;
+}
+#f0 {
+  position: absolute;
+  bottom: 80px;
+  left: 120px;
+  width: 1200px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+#z2 {
+  display: flex;
+  gap: 20px;
+}
+#ig {
+  background-image: url(./fe8d64905cfad400bb0c9d9c07c4f6c9547434d8.png);
+  background-position: center;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
 }
